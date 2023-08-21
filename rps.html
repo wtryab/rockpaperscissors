@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+<!--AddEventListener not used, use in next projects-->
+  <h1>
+    Rock Paper Scissors
+  </h1>
+  <main class="grid1">
+    <div class="innergrid">
+      <button class="button" onclick="
+        playgame('Rock');
+      ">
+        <img class="picture" src="rock.png" alt="">
+      </button>
+    </div>
+    <div class="innergrid">
+      <button class="button" onclick="
+        playgame('Paper');
+      ">
+      <img class="picture" src="paper.png" alt="">
+      </button>
+    </div>
+    <div class="innergrid">
+      <button class="button" onclick="
+        playgame('Scissors');
+      ">
+        <img class="picture" src="scissors.png" alt="">
+      </button>
+    </div>
+  </main>
+  <section class="scoredisplay"> 
+    <p class="tab"></p>
+    <p class="scoredisplayelem"></p>
+    <button class="resetbutton" onclick="
+      reset();
+      clearInterval(x);
+    ">
+      Reset Score
+    </button>
+    <button class="autoplaybutton" onclick="
+     x = setInterval(autoplay, 3000);">
+      Auto Play
+    </button>
+  </section>
+  <script src="rps.js"></script>
+</body>
+</html>
